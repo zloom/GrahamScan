@@ -77,7 +77,7 @@ namespace GrahamScan
 
             for (int i = 3; i < points.Length; i++)
             {
-                while (stack.NextToTop().Orientation(stack.Peek(), points[i]) != 2)
+                while (stack.Count > 1 && stack.NextToTop().Orientation(stack.Peek(), points[i]) != 2)
                 {
                     stack.Pop();
                 }
